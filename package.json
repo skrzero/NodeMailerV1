@@ -23,7 +23,12 @@
     "multer": "^2.0.2",
     "node": "^22.19.0",
     "nodemailer": "^7.0.6",
+<<<<<<< HEAD
     "sql": "^0.78.0",
+=======
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7",
+>>>>>>> 118213cf73e6675ab368c6dd0b87c4be88afb15f
     "uuid": "^11.1.0"
   },
   "repository": {
