@@ -1,0 +1,25 @@
+{
+  "name": "nodemailer",
+  "version": "1.0.0",
+  "description": "Projet du jour 3 des révisions pour le CCP2 du TP DEV WEB et WEB MOBILE AFEC PAU + DAX 2025",
+  "license": "ISC",
+  "author": "Guillaume, Ilona, Sébastien, Angélique, Pierre",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "joi": "^18.0.1",
+    "lowdb": "^7.0.1",
+    "multer": "^2.0.2",
+    "node": "^22.19.0",
+    "nodemailer": "^7.0.6",
+    "uuid": "^11.1.0"
+  }
+}
