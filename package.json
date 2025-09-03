@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "argon2": "^0.44.0",
+    "body-parser": "^2.2.0",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "express-validator": "^7.2.1",
     "joi": "^18.0.1",
     "lite": "^4.0.5",
     "lowdb": "^7.0.1",
@@ -23,5 +25,14 @@
     "nodemailer": "^7.0.6",
     "sql": "^0.78.0",
     "uuid": "^11.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skrzero/NodeMailerV1.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/skrzero/NodeMailerV1/issues"
+  },
+  "homepage": "https://github.com/skrzero/NodeMailerV1#readme"
 }
