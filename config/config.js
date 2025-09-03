@@ -1,17 +1,24 @@
-import mysql from 'mysql2/promise';
-import dotenv from 'dotenv';
+import sqlite3 from "sqlite3";
+import { open } from "sqlite";
 
-dotenv.config();
+export async function initDB() {
+  const db = await open({
+    filename: "mydb.sqlite",
+    driver: sqlite3.Database
+  });
 
-const connectMariaDB = mysql.createPool({
-  host: process.env.MARIADB_HOST,
-  user: process.env.MARIADB_USER,
-  password: process.env.MARIADB_PASSWORD,
-  database: process.env.MARIADB_NAME,
-  port: process.env.MARIADB_PORT,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0
-});
+  // Création de la table users
+  await db.exec(`
+    CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      email TEXT UNIQUE NOT NULL,
+      password TEXT NOT NULL
+    )
+  `);
 
-export default connectMariaDB;
+  console.log("DB SQLite initialized ✅");
+  return db;
+}
+
+export default initDB;
